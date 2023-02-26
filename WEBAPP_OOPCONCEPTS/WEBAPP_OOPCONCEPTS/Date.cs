@@ -14,18 +14,18 @@ namespace WEBAPP_OOPCONCEPTS
 
         #region Methods
 
-        public Date(int day,int month, int year) //Constructor
+        public Date(int day, int month, int year) //Constructor
         {
             _day = CheckDay(day, month, year);
             _month = CheckMonth(month);
             _year = CheckYear(year);
-            
+
         }
 
         private int CheckDay(int day, int month, int year)
         {
             int[] DaysxMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }; //Month's array with position as number of days
-            if (month >=1 && month <=12)
+            if (month >= 1 && month <= 12)
             {
                 if (month == 2 && day == 29 && IsLeapYear(year))
                 {
@@ -45,20 +45,20 @@ namespace WEBAPP_OOPCONCEPTS
         private bool IsLeapYear(int year)
         {
 
-                return year % 400 == 0 || year % 4 == 0 && year % 100 != 0;
-           
+            return year % 400 == 0 || year % 4 == 0 && year % 100 != 0;
+
         }
         private int CheckMonth(int month)
         {
 
-                if(month <=12 && month>=1)
-                {
-                    return month;
-                }
-            
-                throw new MonthException("The month isn't valid");
+            if (month <= 12 && month >= 1)
+            {
+                return month;
+            }
 
-            
+            throw new MonthException("The month isn't valid");
+
+
         }
         private int CheckYear(int year)
         {
@@ -71,7 +71,7 @@ namespace WEBAPP_OOPCONCEPTS
 
         public override string ToString()
         {
-            return String.Format("{0:00}/{1:00}/{2:0000}", _day,_month,_year);
+            return String.Format("{0:00}/{1:00}/{2:0000}", _day, _month, _year);
         }
 
         #endregion

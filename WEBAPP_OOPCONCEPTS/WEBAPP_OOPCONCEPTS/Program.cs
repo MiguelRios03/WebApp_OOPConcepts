@@ -35,7 +35,7 @@ namespace WEBAPP_OOPCONCEPTS
 
                 Console.WriteLine(message);
             }
-            
+
         }
     }
 }
