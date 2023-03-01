@@ -18,8 +18,8 @@ namespace WEBAPP_OOPCONCEPTS
 
         public override string ToString()
         {
-            return $"{base.ToString()}\n\t" +
-                $"Salary....{GetValueToPay():C2}";
+            return $"{base.ToString()}" +
+                $"Salary....{GetValueToPay():C2} \n";
         }   
 
 

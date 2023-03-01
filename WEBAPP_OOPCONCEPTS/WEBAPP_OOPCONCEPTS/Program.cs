@@ -55,7 +55,7 @@ namespace WEBAPP_OOPCONCEPTS
                     Sales = 20000
                 };
 
-                Console.WriteLine(SalaryEmployee);
+                Console.WriteLine(ComissionEmployee);
 
             }
             catch (Exception message)

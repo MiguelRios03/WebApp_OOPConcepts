@@ -23,10 +23,10 @@ namespace WEBAPP_OOPCONCEPTS
 
         public override string ToString()
         {
-            return $"{base.ToString()}\n\t" +
-                $"Comission Percentage.......{ComissionPercenteage/100:P2}" +
-                $"Sales.....{Sales:C2}" +
-                $"Get Value to Pay.....{GetValueToPay():C2}";
+            return $"{base.ToString()}" +
+                $"Comission Percentage.......{ComissionPercenteage/100:P2}\n" +
+                $"Sales.....{Sales:C2}\n" +
+                $"Get Value to Pay.....{GetValueToPay():C2} \n";
         }   
 
 
