@@ -42,6 +42,21 @@ namespace WEBAPP_OOPCONCEPTS
 
                 Console.WriteLine(SalaryEmployee);
 
+
+                Employee ComissionEmployee = new ComissionEmployee()
+                {
+                    ID = 1,
+                    FirstName = "Patricia",
+                    LastName = "Alcantarez",
+                    BirthDate = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = true,
+                    ComissionPercenteage = 5,
+                    Sales = 20000
+                };
+
+                Console.WriteLine(SalaryEmployee);
+
             }
             catch (Exception message)
             {
