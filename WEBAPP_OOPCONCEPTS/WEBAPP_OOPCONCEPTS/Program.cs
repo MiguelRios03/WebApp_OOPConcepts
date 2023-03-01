@@ -29,6 +29,19 @@ namespace WEBAPP_OOPCONCEPTS
 
                 Console.WriteLine("\n************************\n");
 
+                Employee SalaryEmployee = new SalaryEmployee()
+                {
+                    ID = 1,
+                    FirstName = "Patricia",
+                    LastName = "Alcantarez",
+                    BirthDate = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = true,
+                    Salary = 1160000
+                };
+
+                Console.WriteLine(SalaryEmployee);
+
             }
             catch (Exception message)
             {
