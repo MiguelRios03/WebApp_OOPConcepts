@@ -64,6 +64,7 @@ namespace WEBAPP_OOPCONCEPTS
                 Console.Write("\nPlease, type the last name: ");
                 String lastName = Console.ReadLine();
 
+                /*
                 Console.Write("\nPlease, type the day of born: ");
                 int dayBorn = Int32.Parse(Console.ReadLine());
 
@@ -81,6 +82,7 @@ namespace WEBAPP_OOPCONCEPTS
 
                 Console.Write("\nPlease, type the year of hiring: ");
                 int yearHiring = Int32.Parse(Console.ReadLine());
+                */
 
                 Console.Write("\nPlease, type if is an active employee (true/false): ");
                 bool isActive = Boolean.Parse(Console.ReadLine());
@@ -98,8 +100,8 @@ namespace WEBAPP_OOPCONCEPTS
                 ID = id,
                 FirstName = firstName,
                 LastName = lastName,
-                BirthDate = new Date(dayBorn, monthBorn, yearBorn),
-                HiringDate = new Date(dayHiring, monthHiring, yearHiring),
+                BirthDate = new Date(day, month, year),
+                HiringDate = new Date(day, month, year),
                 IsActive = isActive,
                 Hours = hours,
                 HourValue = hourValue
@@ -124,6 +126,15 @@ namespace WEBAPP_OOPCONCEPTS
 
                 Console.WriteLine(BaseComissionEmployee);
 
+                Console.WriteLine("\n------------ INVOICE ------------");
+                Invoice invoice = new Invoice() { 
+                    ID=6060,
+                    Description="Salchichon",
+                    Quantity=2,
+                    Price=1500
+                };
+
+                Console.WriteLine(invoice);
             }
             catch (Exception message)
             {
