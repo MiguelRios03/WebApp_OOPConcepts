@@ -57,6 +57,39 @@ namespace WEBAPP_OOPCONCEPTS
 
                 Console.WriteLine(ComissionEmployee);
 
+                Console.WriteLine("Please, type the ID: ");
+                int id = Int32.Parse(Console.ReadLine());
+
+                Console.WriteLine("\nPlease, type the first name: ");
+                String firstName = Console.ReadLine();
+
+                Console.WriteLine("\nPlease, type the last name: ");
+                String lastName = Console.ReadLine();
+
+                Console.WriteLine("Please, type if is an active employee (true/false): ");
+                bool isActive = Boolean.Parse(Console.ReadLine());
+
+                Console.WriteLine("\nPlease, type the hours: ");
+                float hours = float.Parse(Console.ReadLine());
+
+                Console.WriteLine("\nPlease, type value per hour: ");
+                Decimal hourValue = Decimal.Parse(Console.ReadLine());
+
+
+                Employee HourlyEmployee = new HourlyEmployee()
+                {
+                ID = id,
+                FirstName = firstName,
+                LastName = lastName,
+                BirthDate = dateObject,
+                HiringDate = dateObject,
+                IsActive = isActive,
+                Hours = hours,
+                HourValue = hourValue
+                };
+
+                Console.WriteLine(HourlyEmployee);
+
             }
             catch (Exception message)
             {

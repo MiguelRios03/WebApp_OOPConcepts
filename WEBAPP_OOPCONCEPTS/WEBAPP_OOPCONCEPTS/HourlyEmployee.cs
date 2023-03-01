@@ -4,28 +4,25 @@ using System.Text;
 
 namespace WEBAPP_OOPCONCEPTS
 {
-    public class ComissionEmployee : Employee
+    public class HourlyEmployee : Employee
     {
         #region Properties
 
-        public double ComissionPercenteage { get; set; }
-
-        public decimal Sales { get; set; }
+        public float Hours { get; set; }
+        public decimal HourValue { get; set; }
 
         #endregion 
-
-
-
         public override decimal GetValueToPay()
         {
-            return Sales * ((decimal)ComissionPercenteage/100);
+            return HourValue*(decimal)Hours;
         }
 
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                $"Sales.....{Sales:C2}\n" +
-                $"Value to Pay.....{GetValueToPay():C2} \n";
+                $"Hours....{Hours}\n" +
+                $"HoursValue....{HourValue}\n" +
+                $"Value To Pay....{GetValueToPay():C2}\n";
         }   
 
 
