@@ -107,6 +107,23 @@ namespace WEBAPP_OOPCONCEPTS
 
                 Console.WriteLine(HourlyEmployee);
 
+                Console.WriteLine("\n----------- BASE COMISSION EMPLOYEEE -----------");
+
+                Employee BaseComissionEmployee = new BaseComissionEmployee()
+                {
+                    ID = 400,
+                    FirstName = "Paco",
+                    LastName = "Aristizabal",
+                    BirthDate = new Date(day, month, year),
+                    HiringDate = new Date(day, month, year),
+                    IsActive = true,
+                    ComissionPercenteage = 10,
+                    Sales = 50000000,
+                    Base = 5000000
+                };
+
+                Console.WriteLine(BaseComissionEmployee);
+
             }
             catch (Exception message)
             {
