@@ -22,13 +22,6 @@ namespace WEBAPP_OOPCONCEPTS
 
                 Console.WriteLine("\n------------------------------------\n");
 
-                Console.WriteLine("********* DATE *********\n");
-
-                var dateObject = new Date(day, month, year);
-                Console.WriteLine("Your date is " + dateObject);
-
-                Console.WriteLine("\n************************\n");
-
                 Console.WriteLine("\n------------- SALARY EMPLOYEEE -------------");
 
                 Employee SalaryEmployee = new SalaryEmployee()
@@ -36,8 +29,8 @@ namespace WEBAPP_OOPCONCEPTS
                     ID = 100,
                     FirstName = "Patricia",
                     LastName = "Alcantarez",
-                    BirthDate = dateObject,
-                    HiringDate = dateObject,
+                    BirthDate = new Date(day, month, year),
+                    HiringDate = new Date(day, month, year),
                     IsActive = true,
                     Salary = 1160000
                 };
@@ -51,8 +44,8 @@ namespace WEBAPP_OOPCONCEPTS
                     ID = 200,
                     FirstName = "Juan",
                     LastName = "Salazar",
-                    BirthDate = dateObject,
-                    HiringDate = dateObject,
+                    BirthDate = new Date(day, month, year),
+                    HiringDate = new Date(day, month, year),
                     IsActive = true,
                     ComissionPercenteage = 5,
                     Sales = 20000000
@@ -62,22 +55,40 @@ namespace WEBAPP_OOPCONCEPTS
 
                 Console.WriteLine("\n---------- INFO HOURLY EMPLOYEEE ----------");
 
-                Console.WriteLine("\nPlease, type the ID: ");
+                Console.Write("\nPlease, type the ID: ");
                 int id = Int32.Parse(Console.ReadLine());
 
-                Console.WriteLine("\nPlease, type the first name: ");
+                Console.Write("\nPlease, type the first name: ");
                 String firstName = Console.ReadLine();
 
-                Console.WriteLine("\nPlease, type the last name: ");
+                Console.Write("\nPlease, type the last name: ");
                 String lastName = Console.ReadLine();
 
-                Console.WriteLine("\nPlease, type if is an active employee (true/false): ");
+                Console.Write("\nPlease, type the day of born: ");
+                int dayBorn = Int32.Parse(Console.ReadLine());
+
+                Console.Write("\nPlease, type the month of born: ");
+                int monthBorn = Int32.Parse(Console.ReadLine());
+
+                Console.Write("\nPlease, type the year of born: ");
+                int yearBorn = Int32.Parse(Console.ReadLine());
+
+                Console.Write("\nPlease, type the day of hiring: ");
+                int dayHiring = Int32.Parse(Console.ReadLine());
+
+                Console.Write("\nPlease, type the month of hiring: ");
+                int monthHiring = Int32.Parse(Console.ReadLine());
+
+                Console.Write("\nPlease, type the year of hiring: ");
+                int yearHiring = Int32.Parse(Console.ReadLine());
+
+                Console.Write("\nPlease, type if is an active employee (true/false): ");
                 bool isActive = Boolean.Parse(Console.ReadLine());
 
-                Console.WriteLine("\nPlease, type the hours: ");
+                Console.Write("\nPlease, type the hours: ");
                 float hours = float.Parse(Console.ReadLine());
 
-                Console.WriteLine("\nPlease, type value per hour: ");
+                Console.Write("\nPlease, type value per hour: ");
                 decimal hourValue = Decimal.Parse(Console.ReadLine());
 
                 Console.WriteLine("\n------------ HOURLY EMPLOYEEE ------------");
@@ -87,8 +98,8 @@ namespace WEBAPP_OOPCONCEPTS
                 ID = id,
                 FirstName = firstName,
                 LastName = lastName,
-                BirthDate = dateObject,
-                HiringDate = dateObject,
+                BirthDate = new Date(dayBorn, monthBorn, yearBorn),
+                HiringDate = new Date(dayHiring, monthHiring, yearHiring),
                 IsActive = isActive,
                 Hours = hours,
                 HourValue = hourValue
