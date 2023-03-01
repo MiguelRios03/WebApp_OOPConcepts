@@ -11,7 +11,9 @@ namespace WEBAPP_OOPCONCEPTS
         public float Hours { get; set; }
         public decimal HourValue { get; set; }
 
-        #endregion 
+        #endregion
+
+        #region Methods
         public override decimal GetValueToPay()
         {
             return HourValue*(decimal)Hours;
@@ -20,11 +22,12 @@ namespace WEBAPP_OOPCONCEPTS
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                $"Hours....{Hours}\n" +
-                $"HoursValue....{HourValue}\n" +
-                $"Value To Pay....{GetValueToPay():C2}\n";
-        }   
+                $"Hours....................{Hours}\n" +
+                $"HoursValue...............{HourValue:C2}\n" +
+                $"Value To Pay.............{GetValueToPay():C2}\n";
+        }
 
+        #endregion
 
     }
 }

@@ -29,9 +29,11 @@ namespace WEBAPP_OOPCONCEPTS
 
                 Console.WriteLine("\n************************\n");
 
+                Console.WriteLine("\n------------- SALARY EMPLOYEEE -------------");
+
                 Employee SalaryEmployee = new SalaryEmployee()
                 {
-                    ID = 1,
+                    ID = 100,
                     FirstName = "Patricia",
                     LastName = "Alcantarez",
                     BirthDate = dateObject,
@@ -42,22 +44,25 @@ namespace WEBAPP_OOPCONCEPTS
 
                 Console.WriteLine(SalaryEmployee);
 
+                Console.WriteLine("\n----------- COMISSION EMPLOYEEE -----------");
 
                 Employee ComissionEmployee = new ComissionEmployee()
                 {
-                    ID = 1,
-                    FirstName = "Patricia",
-                    LastName = "Alcantarez",
+                    ID = 200,
+                    FirstName = "Juan",
+                    LastName = "Salazar",
                     BirthDate = dateObject,
                     HiringDate = dateObject,
                     IsActive = true,
                     ComissionPercenteage = 5,
-                    Sales = 20000
+                    Sales = 20000000
                 };
 
                 Console.WriteLine(ComissionEmployee);
 
-                Console.WriteLine("Please, type the ID: ");
+                Console.WriteLine("\n---------- INFO HOURLY EMPLOYEEE ----------");
+
+                Console.WriteLine("\nPlease, type the ID: ");
                 int id = Int32.Parse(Console.ReadLine());
 
                 Console.WriteLine("\nPlease, type the first name: ");
@@ -66,15 +71,16 @@ namespace WEBAPP_OOPCONCEPTS
                 Console.WriteLine("\nPlease, type the last name: ");
                 String lastName = Console.ReadLine();
 
-                Console.WriteLine("Please, type if is an active employee (true/false): ");
+                Console.WriteLine("\nPlease, type if is an active employee (true/false): ");
                 bool isActive = Boolean.Parse(Console.ReadLine());
 
                 Console.WriteLine("\nPlease, type the hours: ");
                 float hours = float.Parse(Console.ReadLine());
 
                 Console.WriteLine("\nPlease, type value per hour: ");
-                Decimal hourValue = Decimal.Parse(Console.ReadLine());
+                decimal hourValue = Decimal.Parse(Console.ReadLine());
 
+                Console.WriteLine("\n------------ HOURLY EMPLOYEEE ------------");
 
                 Employee HourlyEmployee = new HourlyEmployee()
                 {

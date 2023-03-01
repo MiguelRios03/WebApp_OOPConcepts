@@ -23,13 +23,12 @@ namespace WEBAPP_OOPCONCEPTS
 
         public override string ToString()
         {
-            return $" ----- EMPLOYEE ---- \n" +
-                $"ID......{ID}\n" +
-                $"FirstName.....{FirstName}\n " +
-                $"LastName.....{LastName}\n" +
-                $"BirthDate....{BirthDate}\n" +
-                $"HiringDate...{HiringDate}\n" +
-                $"Is Active?....{IsActive}\n";
+            return $"ID.......................{ID}\n" +
+                $"FirstName................{FirstName}\n" +
+                $"LastName.................{LastName}\n" +
+                $"BirthDate................{BirthDate}\n" +
+                $"HiringDate...............{HiringDate}\n" +
+                $"Is Active?...............{IsActive}\n";
         }
 
 

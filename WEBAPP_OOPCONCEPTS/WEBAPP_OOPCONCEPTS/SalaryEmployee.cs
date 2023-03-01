@@ -10,7 +10,9 @@ namespace WEBAPP_OOPCONCEPTS
 
         public decimal Salary { get; set; }
 
-        #endregion 
+        #endregion
+
+        #region Methods
         public override decimal GetValueToPay()
         {
             return Salary;
@@ -19,9 +21,9 @@ namespace WEBAPP_OOPCONCEPTS
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                $"Salary....{GetValueToPay():C2} \n";
-        }   
+                $"Salary...................{GetValueToPay():C2} \n";
+        }
 
-
+        #endregion
     }
 }

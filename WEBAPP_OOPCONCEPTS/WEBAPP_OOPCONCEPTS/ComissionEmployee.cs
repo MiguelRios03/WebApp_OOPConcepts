@@ -12,22 +12,25 @@ namespace WEBAPP_OOPCONCEPTS
 
         public decimal Sales { get; set; }
 
-        #endregion 
+        #endregion
 
-
-
+        #region Methods
         public override decimal GetValueToPay()
         {
-            return Sales * ((decimal)ComissionPercenteage/100);
+            
+
+            return Sales * (decimal)ComissionPercenteage/100;
         }
 
         public override string ToString()
         {
+
             return $"{base.ToString()}" +
-                $"Sales.....{Sales:C2}\n" +
-                $"Value to Pay.....{GetValueToPay():C2} \n";
-        }   
+                $"Comission Percenteage....{ComissionPercenteage/100:P2}\n" + 
+                $"Sales....................{Sales:C2}\n" +
+                $"Value to Pay.............{GetValueToPay():C2} \n";
+        }
 
-
+        #endregion
     }
 }
